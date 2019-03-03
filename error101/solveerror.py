@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-def google_search(uri):
-    uri = 'https://www.google.com/search?q=' + uri
+def google_search(query):
+    uri = 'https://www.google.com/search?q=' + query
     raw_result = requests.get(uri)
     soup = BeautifulSoup(raw_result.content)
     
@@ -12,4 +12,4 @@ def google_search(uri):
 
 
 #query = 'tensorflow install error'
-#google_search('https://www.google.com/search?q=' + query)
+#google_search(query)
